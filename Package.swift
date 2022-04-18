@@ -19,7 +19,9 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "Helloworld",
-            dependencies: []),
+            dependencies: [
+                .product(name: "GRPC", package: "grpc-swift")
+            ]),
         .testTarget(
             name: "HelloworldTests",
             dependencies: ["Helloworld"]),
