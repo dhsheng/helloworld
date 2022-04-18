@@ -1,3 +1,3 @@
-typealias AuthenticateRequest = AuthenticateRequest
-typealias AuthenticateResponse = AuthenticateResponse
-typealias AuthenticateServiceClient = AuthenticateServiceClient
+public typealias AuthenticateRequest = AuthenticateRequest
+public typealias AuthenticateResponse = AuthenticateResponse
+public typealias AuthenticateServiceClient = AuthenticateServiceClient
