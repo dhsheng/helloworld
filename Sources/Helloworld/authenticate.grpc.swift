@@ -26,7 +26,7 @@ import SwiftProtobuf
 
 
 /// Usage: instantiate `AuthenticateServiceClient`, then call methods of this protocol to make API calls.
-internal protocol AuthenticateServiceClientProtocol: GRPCClient {
+public protocol AuthenticateServiceClientProtocol: GRPCClient {
   var serviceName: String { get }
   var interceptors: AuthenticateServiceClientInterceptorFactoryProtocol? { get }
 
@@ -37,7 +37,7 @@ internal protocol AuthenticateServiceClientProtocol: GRPCClient {
 }
 
 extension AuthenticateServiceClientProtocol {
-  internal var serviceName: String {
+  public var serviceName: String {
     return "AuthenticateService"
   }
 
@@ -47,7 +47,7 @@ extension AuthenticateServiceClientProtocol {
   ///   - request: Request to send to Authenticate.
   ///   - callOptions: Call options.
   /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func authenticate(
+  public func authenticate(
     _ request: AuthenticateRequest,
     callOptions: CallOptions? = nil
   ) -> UnaryCall<AuthenticateRequest, AuthenticateResponse> {
@@ -60,16 +60,16 @@ extension AuthenticateServiceClientProtocol {
   }
 }
 
-internal protocol AuthenticateServiceClientInterceptorFactoryProtocol {
+public protocol AuthenticateServiceClientInterceptorFactoryProtocol {
 
   /// - Returns: Interceptors to use when invoking 'authenticate'.
   func makeAuthenticateInterceptors() -> [ClientInterceptor<AuthenticateRequest, AuthenticateResponse>]
 }
 
-internal final class AuthenticateServiceClient: AuthenticateServiceClientProtocol {
-  internal let channel: GRPCChannel
-  internal var defaultCallOptions: CallOptions
-  internal var interceptors: AuthenticateServiceClientInterceptorFactoryProtocol?
+public final class AuthenticateServiceClient: AuthenticateServiceClientProtocol {
+  public let channel: GRPCChannel
+  public var defaultCallOptions: CallOptions
+  public var interceptors: AuthenticateServiceClientInterceptorFactoryProtocol?
 
   /// Creates a client for the AuthenticateService service.
   ///
@@ -77,7 +77,7 @@ internal final class AuthenticateServiceClient: AuthenticateServiceClientProtoco
   ///   - channel: `GRPCChannel` to the service host.
   ///   - defaultCallOptions: Options to use for each service call if the user doesn't provide them.
   ///   - interceptors: A factory providing interceptors for each RPC.
-  internal init(
+  public init(
     channel: GRPCChannel,
     defaultCallOptions: CallOptions = CallOptions(),
     interceptors: AuthenticateServiceClientInterceptorFactoryProtocol? = nil

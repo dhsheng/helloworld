@@ -1,3 +1,3 @@
-public typealias HelloworldAuthenticateRequest = AuthenticateRequest
-public typealias HelloworldAuthenticateResponse = AuthenticateResponse
-public typealias HelloworldAuthenticateServiceClient = AuthenticateServiceClient
+typealias HelloworldAuthenticateRequest = AuthenticateRequest
+typealias HelloworldAuthenticateResponse = AuthenticateResponse
+typealias HelloworldAuthenticateServiceClient = AuthenticateServiceClient
