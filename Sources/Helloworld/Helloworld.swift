@@ -1,3 +1,3 @@
-public typealias AuthenticateRequest = AuthenticateRequest
-public typealias AuthenticateResponse = AuthenticateResponse
-public typealias AuthenticateServiceClient = AuthenticateServiceClient
+public typealias HelloworldAuthenticateRequest = AuthenticateRequest
+public typealias HelloworldAuthenticateResponse = AuthenticateResponse
+public typealias HelloworldAuthenticateServiceClient = AuthenticateServiceClient
